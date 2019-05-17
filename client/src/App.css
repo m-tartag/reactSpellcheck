@@ -1,4 +1,25 @@
-.app {
+#App-root {
   font-family: "Ubuntu Condensed", sans-serif;
+  text-align: center;
+  /* border: 2px solid black; */
+}
+
+#Sandbox-component {
+  text-align: left;
+  margin-top: 2em;
+  /* border: 2px solid black; */
+  padding: 30px 40px 1px 40px;
+  background-color: #d5dbd4;
+  border-radius: 15px;
+}
+#Navbar-component {
+  /* border: 2px solid black; */
+  background-color: #3177c6;
+  margin-left: 9.4em;
+  margin-right: 9.4em;
+  margin-top: 1em;
+  border-radius: 15px;
+}
+#figure {
   text-align: center;
 }

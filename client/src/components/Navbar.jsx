@@ -1,4 +1,8 @@
 import React from "react";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { library } from "@fortawesome/fontawesome-svg-core";
+
 import {
   Collapse,
   Navbar,
@@ -12,6 +16,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+// library.add(faCode);
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -29,9 +34,13 @@ export default class Example extends React.Component {
   }
   render() {
     return (
-      <div className="container">
-        <Navbar color="success" light expand="md">
-          <NavbarBrand href="/">Word Checker</NavbarBrand>
+      <div className="" id="Navbar-component">
+        <Navbar color="" light expand="md">
+          <NavbarBrand href="#">
+            <FontAwesomeIcon icon={faCode} />
+          </NavbarBrand>
+
+          <NavbarBrand href="/">Vandelay Industries </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

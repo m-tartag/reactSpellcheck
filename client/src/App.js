@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
+
 import Navbar from "./components/Navbar";
-import Main from "./components/Main";
+// import Main from "./components/Main";
+import Sandbox from "./components/Sandbox";
 
 function App() {
   return (
-    <div className="app">
+    <div id="App-root">
       <Navbar />
-      <Main />
+      {/* <Main /> */}
+      <Sandbox />
     </div>
   );
 }
