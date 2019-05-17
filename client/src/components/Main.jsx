@@ -6,8 +6,9 @@ export class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "",
-      apiValue: ""
+      value: [],
+      apiValue: [],
+      color: []
     };
   }
   handleBlur() {
@@ -17,11 +18,13 @@ export class Main extends Component {
     axios.get(Url).then(res => {
       if (res.data.length > 0) {
         const Value = res.data[0].word;
-        console.log(res.data[0].word);
+        this.setState({ color: "green" });
         this.setState({ apiValue: Value });
         console.log(this.state.apiValue);
+        console.log(this.state.color);
       } else {
         console.log("Not a Word!");
+        this.setState({ color: "red" });
       }
     });
   }
@@ -31,11 +34,16 @@ export class Main extends Component {
   }
 
   render() {
+    // let style = {
+    //   color: { ...this.state.color }
+    // };
     return (
       <div className="container">
         <Jumbotron id="main">
           <h1 className="display-4">Word Checker</h1>
-          <p className="lead">A MERN Stack app that checks spelling.</p>
+          <p style={{ color: "green" }} className="lead">
+            A MERN Stack app that checks spelling.
+          </p>
           <FormGroup>
             <Label for="exampleText" />
             <Input
@@ -52,7 +60,7 @@ export class Main extends Component {
           <p className="lead">
             <Button color="primary">Submit</Button>
           </p>
-          <span>{this.state.value}</span>
+          <p style={{ color: `${this.state.color}` }}>{this.state.value}</p>
         </Jumbotron>
       </div>
     );
