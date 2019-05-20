@@ -1,6 +1,6 @@
-import React from "react";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { library } from "@fortawesome/fontawesome-svg-core";
 
 import {
@@ -15,7 +15,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem
-} from "reactstrap";
+} from 'reactstrap';
 // library.add(faCode);
 
 export default class Example extends React.Component {

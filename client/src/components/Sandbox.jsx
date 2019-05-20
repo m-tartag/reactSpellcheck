@@ -1,7 +1,20 @@
-import React, { Component } from "react";
-import { Form, Button, Col, Figure } from "react-bootstrap";
+import React, { Component } from 'react';
+import { Form, Button, Col, Figure } from 'react-bootstrap';
 
 export class Sandbox extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: [],
+      password: [],
+      address: [],
+      address_2: [],
+      city: [],
+      state: [],
+      zip: []
+    };
+  }
+
   render() {
     return (
       <div className="container" id="Sandbox-component">
